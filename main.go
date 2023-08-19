@@ -8,5 +8,5 @@ import (
 
 func main() {
 	runtime.GOMAXPROCS(2)
-	clone.Hello()
+	hello.Hello()
 }
