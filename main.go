@@ -10,7 +10,7 @@ func main() {
 	runtime.GOMAXPROCS(2)
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello, World!a")
+		c.String(200, "Hello, World!ab")
 	})
 	r.Run()
 }
