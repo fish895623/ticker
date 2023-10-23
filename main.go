@@ -1,16 +1,18 @@
 package main
 
 import (
-	"runtime"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	runtime.GOMAXPROCS(2)
 	r := gin.Default()
+	r.LoadHTMLGlob("templates/*")
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello, World!ab")
+		c.HTML(http.StatusOK, "index.tmpl", gin.H{
+			"title": "This is Main Website",
+		})
 	})
 	r.Run()
 }
