@@ -1,0 +1,5 @@
+<head>
+  <title>{%block title%}{%endblock%}</title>
+</head>
+<h1>asdfasdfadsf</h1>
+{%block extra%}{%endblock%}
