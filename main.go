@@ -3,10 +3,14 @@ package main
 import (
 	"runtime"
 
-	"github.com/fish895623/ticker/hello"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	runtime.GOMAXPROCS(2)
-	hello.Hello()
+	r := gin.Default()
+	r.GET("/", func(c *gin.Context) {
+		c.String(200, "Hello, World!a")
+	})
+	r.Run()
 }
